@@ -8,6 +8,7 @@ import icon02 from '../assets/images/icon02.png';
 import icon03 from '../assets/images/icon03.png';
 import { BsArrowRight, } from 'react-icons/bs';
 import About from '../components/About/About';
+import ServiceList from '../components/Services/ServiceList';
 
 
 
@@ -174,15 +175,30 @@ const Home = () => {
               <div className="xl:w-[470px] mx-auto">
                 <h2 className='heading text-center'>Our medical services</h2>
                 <p className="text__para text-center">World -class care for everyone. Our health system offers unmatched,
-              expert health care.</p>
+              expert health care.
+              </p>
               </div>
+
+              <ServiceList/>
+
             </div>
           </section>
            {/* service section */}
 
+       {/* feature section start */}
 
+       <section>
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+            {/* feature content */}
+            <div className="xl:w-[670px]">
+              <h2 className="heading"></h2>
+            </div>
+          </div>
+        </div>
+       </section>
 
-      
+       {/* feature section end */}
 
 
     </>

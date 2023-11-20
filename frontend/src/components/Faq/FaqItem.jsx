@@ -8,7 +8,7 @@ const FaqItem = ({item}) => {
 const [isOpen, setIsOpen] = useState(false);
 
 const toggleAccordion = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
 }
 
   return (

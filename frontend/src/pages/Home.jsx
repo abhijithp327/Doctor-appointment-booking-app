@@ -168,34 +168,34 @@ const Home = () => {
       </section>
 
       {/* About section start */}
-        <About/>
+      <About />
       {/* About section end*/}
 
 
-          {/* service section */}
-          <section>
-            <div className="container">
-              <div className="xl:w-[470px] mx-auto">
-                <h2 className='heading text-center'>Our medical services</h2>
-                <p className="text__para text-center">World -class care for everyone. Our health system offers unmatched,
+      {/* service section */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className='heading text-center'>Our medical services</h2>
+            <p className="text__para text-center">World -class care for everyone. Our health system offers unmatched,
               expert health care.
-              </p>
-              </div>
+            </p>
+          </div>
 
-              <ServiceList/>
+          <ServiceList />
 
-            </div>
-          </section>
-           {/* service section */}
+        </div>
+      </section>
+      {/* service section */}
 
-       {/* feature section start */}
+      {/* feature section start */}
 
-       <section>
+      <section>
         <div className="container">
           <div className="flex items-center justify-between flex-col lg:flex-row">
             {/* feature content */}
             <div className="xl:w-[670px]">
-              <h2 className="heading">Get virtual treatment <br/> anytime.</h2>
+              <h2 className="heading">Get virtual treatment <br /> anytime.</h2>
               <ul className="pl-4">
                 <li className="text__para">1. Schedule the appointment directly.</li>
                 <li className="text__para">2. Search for your physician here, and contact their office.</li>
@@ -220,30 +220,43 @@ const Home = () => {
                   <span className='w-5 h-5 lg:w-[34px] lg:h-[34px] flex items-center justify-center
                    bg-yellowColor rounded py-1 px-[6px] lg:py-3lg:px-[9px]'>
                     <img src={videoIcon} alt="video" />
-                   </span>
+                  </span>
                 </div>
 
                 <div className="w-[65px] lg:w-[96px] bg-[#CCF0F3] py-1 px-2 lg:py-[6px]
                  lg:px-[10px] text-[8px] leading-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[500] mt-2 lg:mt-4 rounded-full">
                   Consultation
-                 </div>
+                </div>
 
-                 <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px]">
+                <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px]">
                   <img src={avatarIcon} alt="avatar" />
                   <h4 className='text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor'>Harely manus</h4>
                 </div>
 
 
-               </div>
+              </div>
             </div>
 
 
           </div>
         </div>
-       </section>
+      </section>
 
-       {/* feature section end */}
+      {/* feature section end */}
 
+      {/* our great doctors */}
+
+      <section>
+        <div className="container">
+        <div className="xl:w-[470px] mx-auto">
+            <h2 className='heading text-center'>Our great doctors</h2>
+            <p className="text__para text-center">World -class care for everyone. Our health system offers unmatched,
+              expert health care.
+            </p>
+          </div>
+        </div>
+      </section>
+  {/* our great doctors end */}
 
     </>
 

@@ -33,4 +33,15 @@ export const doctors = [
     totalPatients: 1500,
     hospital: "Mount Adora Hospital, Sylhet.",
   },
+
+  {
+    id: "04",
+    name: "Dr. Abhijith p",
+    specialty: "Surgeon",
+    avgRating: 5,
+    totalRating: 300,
+    photo: doctorImg01,
+    totalPatients: 2000,
+    hospital: "Mount Adora Hospital, Sylhet.",
+  },
 ];

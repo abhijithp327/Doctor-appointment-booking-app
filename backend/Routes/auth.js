@@ -13,6 +13,6 @@ router.post('/login', login);
 
 
 
-export { router as authRoute };
+export { router as authRoute };               
 
 // export default router

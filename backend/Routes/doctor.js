@@ -15,4 +15,6 @@ router.delete('/:id', deleteDoctor);
 
 
 
-export { router as doctorRoute};                               
+export { router as doctorRoute};         
+
+// export default router

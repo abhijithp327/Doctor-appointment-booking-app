@@ -15,4 +15,6 @@ router.delete('/:id', deleteUser);
 
 
 
-export { router as userRoute};                               
+export { router as userRoute};     
+
+// export default router

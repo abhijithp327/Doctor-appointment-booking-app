@@ -16,6 +16,6 @@ router.delete('/:id', authenticate, restrict(['patient']), deleteUser);
 
 
 
-export { router as userRoute};     
+export { router as userRoute };     
 
 // export default router

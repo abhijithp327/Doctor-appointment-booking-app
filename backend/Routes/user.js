@@ -6,7 +6,7 @@ import { deleteUser, getAllUser, getSingleUser, updateUser } from '../Controller
 const router = express.Router();
 
 
-router.get('/:id', getSingleUser);
+router.get('/:id', getSingleUser); 
 router.get('/', getAllUser);
 router.put('/:id', updateUser);
 router.delete('/:id', deleteUser);

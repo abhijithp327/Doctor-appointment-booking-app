@@ -5,7 +5,7 @@ import User from '../models/UserSchema.js';
 
 
 
-export const authenticate = async (req,res,next) => {
+export const authenticate = async (req ,res, next) => {
     //get token from headers
     const authToken = req.headers.authorization
 
@@ -32,15 +32,18 @@ export const authenticate = async (req,res,next) => {
         }
 
 
-        return res.status(401).json({success:false, message:"Invalid token"});
+        return res
+        .status(401)
+        .json({success:false, message:"Invalid token"});
         
     }
-}
+};
 
 
 
 
-export const restrict = (roles) => async (req,res,next) => {
+export const restrict = roles=> async ( req, res, next ) => {
+
     const userId = req.userId;
 
     let user;
@@ -56,10 +59,15 @@ export const restrict = (roles) => async (req,res,next) => {
         user = doctor;
     }
 
-    if (!roles.includes(user.role)) {
-        return res.status(401).json({success:false, message:"You are not authorized"});
+    if (!roles.includes(user?.role)) {
+        return res
+        .status(401)
+        .json({success:false, message:"You are not authorized"});
+        
     }
+
+    
 
     next();
 
-}
+};

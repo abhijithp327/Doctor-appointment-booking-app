@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { Default } from "react-toastify/dist/utils";
+
 
 
 const initialState = {
@@ -9,9 +9,9 @@ const initialState = {
 }
 
 
-const authContext = createContext(initialState);
+export const authContext = createContext(initialState);
 
-const authReducer = (state, action) => {
+export const authReducer = (state, action) => {
 
     switch (action.type) {
         case 'LOGIN_START':
@@ -45,14 +45,17 @@ const authReducer = (state, action) => {
 export const AuthContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(authReducer, initialState);
 
-    return <authContext.Provider
+    return ( 
+    
+    <authContext.Provider
         value={{
             user: state.user,
             token: state.token,
             role: state.role,
             dispatch,
         }}>
-            
+
         { children }
     </authContext.Provider>
-}
+    );
+};

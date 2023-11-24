@@ -6,7 +6,7 @@ export const updateDoctor = async (req,res) => {
     const id = req.params.id
 
     try {
-        const updateDoctor = await Doctor.findByIdAndUpdate(id, {$set : req.body},  {new:true } );
+        const updateDoctor = await Doctor.findByIdAndUpdate(id, {$set : req.body},  {new:true } ); 
             
         res.status(200).json({success:true, message:"Successfully Updated", data: updateDoctor});
     } catch (err) {
@@ -75,4 +75,4 @@ export const getAllDoctor = async (req,res) => {
     } catch (err) {
         res.status(404).json({success:false, message:"Not doctor found"});
     }
-};
+}; 

@@ -4,7 +4,7 @@ const cloud_name = import.meta.env.VITE_CLOUD_NAME;
 
 
 
-const uploadImageToCloudinary = async file => {
+const uploadImageToCloudinary = async (file) => {
     
  const uploadData = new FormData();
 

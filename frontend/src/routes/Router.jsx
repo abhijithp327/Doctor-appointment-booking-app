@@ -8,6 +8,9 @@ import Doctors from '../pages/Doctors/Doctors';
 import DoctorDetails from '../pages/Doctors/DoctorDetails';
 
 import {Routes, Route} from 'react-router-dom';
+import MyAccount from '../Dashboard/user-account/MyAccount';
+import Dashboard from '../Dashboard/doctor-account/Dashboard';
+import ProtectedRoutes from './ProtectedRoutes';
 
 
 
@@ -23,6 +26,8 @@ const Router = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Signup/>}/>
         <Route path='/service' element={<Service/>}/>
+        <Route path='/users/profile/me' element={<ProtectedRoutes allowedRoles={['patient']}> <MyAccount/> </ProtectedRoutes>}/>
+        <Route path='/doctors/profile/me' element={<ProtectedRoutes allowedRoles={['doctor']}> <Dashboard/> </ProtectedRoutes>}/>
     </Routes>
   )
 }

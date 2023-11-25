@@ -1,7 +1,6 @@
 import { useEffect, useRef, useContext } from 'react';
 import logo from '../../assets/images/logo.png';
 import { NavLink, Link } from 'react-router-dom';
-import userImg from '../../assets/images/avatar-icon.png';
 import { BiMenu } from 'react-icons/bi';
 import { authContext } from '../../context/AuthContext';
 
@@ -91,10 +90,9 @@ const Header = () => {
                 <div>
                   <Link to={`${role === 'doctor' ? '/doctors/profile/me' : '/user/profile/me'} `} >
                     <figure className='w-[35px] h-[35px] rounded-full cursor-pointer'>
-                      <img src={user?.photo} className='w-full rounded-full' alt="userimg" />
+                      <img src={user?.photo} className='w-full rounded-full' alt="" />
                     </figure>
 
-                    <h2>{user?.name}</h2>
 
                   </Link>
                 </div>) : (

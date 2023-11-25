@@ -4,6 +4,7 @@ import { BASE_URL } from '../config';
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { authContext } from '../context/AuthContext.jsx';
+import HashLoader from 'react-spinners/HashLoader';
 
 
 
@@ -100,7 +101,7 @@ const Login = () => {
 
           <div className='mt-7'>
             <button className='w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3'
-             type='submit'>Login</button>
+             type='submit'>{ loading ? <HashLoader size={25} color='#fff'/> : 'Login'}</button>
           </div>
 
           <p className='mt-5 text-textColor text-center'>Don&apos;t have an account?

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import userImg from '../../assets/images/doctor-img01.png';
 import { authContext } from '../../context/AuthContext';
 
@@ -8,6 +8,7 @@ import { authContext } from '../../context/AuthContext';
 const MyAccount = () => {
 
   const { dispatch } = useContext(authContext);
+  const [ tab, setTab ] = useState('bookings')
 
   const handleLogout = () => {
     dispatch({type:'LOGOUT' });
@@ -39,6 +40,26 @@ const MyAccount = () => {
 
 
         </div>
+
+
+        <div className='md:col-span-2 md:px-[30px]'>
+          <div>
+            <button onClick={() => setTab('bookings')} className={` ${tab === 'bookings' && 'bg-primaryColor text-white font-normal'} p-2 mr-5 px-5 rounded-md text-textColor font-semibold text-[16px]
+             leading-7 border border-solid border-primaryColor`}>My Bookings
+             </button>
+
+             <button onClick={() => setTab('settings')} className={`${ tab === 'settings' && 'bg-primaryColor text-white font-normal'}
+             py-2 px-5 rounded-md text-textColor font-semibold text-[16px]
+             leading-7 border border-solid border-primaryColor`}>
+              Profile Settings
+             </button>
+          </div>
+        </div>
+
+
+
+
+
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import uploadImageToCloudinary from '../utils/uploadCloudinary';
 import { BASE_URL } from '../config';
 import HashLoader from 'react-spinners/HashLoader';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -17,7 +17,7 @@ const Signup = () => {
   const [previewURL, setPreviewURL] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const [ formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
@@ -39,7 +39,7 @@ const Signup = () => {
     const data = await uploadImageToCloudinary(file);
 
     setPreviewURL(data.url);
-    selectedFile(data.url);
+    setSelectedFile(data.url);
     setFormData({ ...formData, photo: data.url });
 
     // console.log(data);
@@ -53,9 +53,9 @@ const Signup = () => {
 
     try {
       const res = await fetch(`${BASE_URL}/auth/register`, {
-        method:'post',
+        method: 'post',
         headers: {
-          'Content-Type' : 'application/json'
+          'Content-Type': 'application/json'
         },
 
         body: JSON.stringify(formData)
@@ -170,11 +170,11 @@ const Signup = () => {
 
 
               <div className='mb-5 flex items-center gap-3'>
-                
-             { selectedFile &&  <figure className='w-[60px] h-[60px] rounded-full border-2 border-solid
+
+                {selectedFile && <figure className='w-[60px] h-[60px] rounded-full border-2 border-solid
        border-primaryColor flex items-center justify-center'>
                   <img src={previewURL} alt="avatar" className='w-full rounded-full' />
-                </figure> }
+                </figure>}
 
 
                 <div className='relative w-[130px] h-[50px]'>
@@ -191,10 +191,10 @@ const Signup = () => {
 
               <div className='mt-7'>
 
-                <button disabled={ loading && true } type='submit' className='w-full bg-primaryColor
+                <button disabled={loading && true} type='submit' className='w-full bg-primaryColor
                  text-white text-[18px] leading-[30px] rounded-lg px-4 py-3'>
-                   { loading ? <HashLoader size={35} color="#ffffff" /> : 'Sign Up'} 
-                   </button>
+                  {loading ? <HashLoader size={35} color="#ffffff" /> : 'Sign Up'}
+                </button>
 
               </div>
 

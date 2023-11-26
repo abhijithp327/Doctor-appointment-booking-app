@@ -17,7 +17,7 @@ const Signup = () => {
   const [previewURL, setPreviewURL] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
@@ -38,8 +38,9 @@ const Signup = () => {
 
     const data = await uploadImageToCloudinary(file);
 
-    setPreviewURL(data.url)
-    setSelectedFile({ ...FormData, photo: data.url });
+    setPreviewURL(data.url);
+    selectedFile(data.url);
+    setFormData({ ...formData, photo: data.url });
 
     // console.log(data);
     // console.log(file);

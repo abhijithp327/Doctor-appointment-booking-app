@@ -46,7 +46,7 @@ setFormData({
     const data = await uploadImageToCloudinary(file);
 
     setSelectedFile(data.url);
-    setSelectedFile({ ...FormData, photo: data.url });
+    setFormData({ ...FormData, photo: data.url });
     
   }
 

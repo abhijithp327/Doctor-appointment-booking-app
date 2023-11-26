@@ -46,7 +46,7 @@ setFormData({
     const data = await uploadImageToCloudinary(file);
 
     setSelectedFile(data.url);
-    setFormData({ ...FormData, photo: data.url });
+    setFormData({ ...formData, photo: data.url });
     
   }
 
@@ -162,10 +162,14 @@ text-[16px] leading-7 text-headingColor placeholder:text-textColor  cursor-point
 
 <div className='mb-5 flex items-center gap-3'>
   
-{ formData.photo &&  <figure className='w-[60px] h-[60px] rounded-full border-2 border-solid
+{ formData.photo &&  (
+  
+<figure className='w-[60px] h-[60px] rounded-full border-2 border-solid
 border-primaryColor flex items-center justify-center'>
     <img src={formData.photo} alt="avatar" className='w-full rounded-full' />
-  </figure> }
+  </figure>
+
+  )}
 
 
   <div className='relative w-[130px] h-[50px]'>

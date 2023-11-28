@@ -58,7 +58,7 @@ export const register = async (req, res) => {
                 role
             });
 
-        }
+        };
 
 
         if (role === 'doctor') {

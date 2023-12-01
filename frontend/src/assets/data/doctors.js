@@ -7,7 +7,7 @@ export const doctors = [
     id: "01",
     name: "Dr. Alfaz Ahmed",
     specialty: "Surgeon",
-    avgRating: 4.8,
+    avgRating: 4.9,
     totalRating: 272,
     photo: doctorImg01,
     totalPatients: 1500,

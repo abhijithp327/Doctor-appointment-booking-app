@@ -50,6 +50,7 @@ const DoctorCard = ({ doctor }) => {
                 </Link>
 
             </div>
+            
 
         </div>
     )

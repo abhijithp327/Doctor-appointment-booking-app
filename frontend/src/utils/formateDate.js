@@ -1,5 +1,7 @@
 export const formateData = (date, config) => {
     const defaultOptions = {day:'numeric', month:'short', year:'numeric'}
+    
     const options = config ? config : defaultOptions
+    
     return new Date(date).toLocaleDateString('en-Us', options)
 }

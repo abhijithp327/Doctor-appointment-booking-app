@@ -2,7 +2,6 @@ import Doctor from "../models/DoctorSchema.js";
 import Review from "../models/ReviewSchema.js";
 
 
-
 // get all reviews
 
 

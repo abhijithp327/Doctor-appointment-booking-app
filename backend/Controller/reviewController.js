@@ -4,7 +4,6 @@ import Review from "../models/ReviewSchema.js";
 
 // get all reviews
 
-
 export const getAllReviews = async ( req, res ) => {
     try {
         const reviews = await Review.find({});
@@ -15,7 +14,6 @@ export const getAllReviews = async ( req, res ) => {
         res.status(404).json({ success: false, message: "Not found" });
 
     }
-
 
 };
 
